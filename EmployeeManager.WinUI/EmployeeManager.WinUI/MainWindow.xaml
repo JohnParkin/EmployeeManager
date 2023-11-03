@@ -7,7 +7,52 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="250"/>
+            <ColumnDefinition Width ="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Header-->
+        <Border Grid.ColumnSpan="2" Background="#F05A28">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+
+                <Image Source ="/Images/30a Thunder Icon.png" Height="90" Margin="5"/>
+                <TextBlock Text="Recipt Man" FontSize="40"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+
+        <!--Navigation-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Button Content="Refresh" Margin="10"/>
+            <ListView Grid.Row="1"/>
+
+        </Grid>
+
+        <!--Main Area-->
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <TextBox Header="FirstName" Margin="10"/>
+            <DatePicker Grid.Row="1" Header="Entry Date" Margin="10"/>
+            <ComboBox Grid.Row="2" Header="Job Role" Margin="10" HorizontalAlignment="Stretch"/>
+            <CheckBox Grid.Row="3" Content="Is A Coffee Dinker" Margin="10"/>
+            <Button Grid.Row="4" Content="Save" Margin="10 10 10 30" 
+                    VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+        </Grid>
+    </Grid>
 </Window>
