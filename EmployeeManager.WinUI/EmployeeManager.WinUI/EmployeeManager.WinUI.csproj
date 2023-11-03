@@ -8,6 +8,7 @@
     <Platforms>x86;x64;arm64</Platforms>
     <RuntimeIdentifiers>win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
+    <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Controls\HeaderControl.xaml" />
@@ -18,6 +19,12 @@
     <PackageReference Include="Microsoft.ProjectReunion.Foundation" Version="0.8.12" />
     <PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.8.12" />
     <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\EmployeeManager.Common\EmployeeManager.Common.csproj" />
+    <ProjectReference Include="..\..\EmployeeManager.DataAccess\EmployeeManager.DataAccess.csproj" />
+    <ProjectReference Include="..\..\EmployeeManager.ViewModel\EmployeeManager.ViewModel.csproj" />
   </ItemGroup>
 
   <ItemGroup>

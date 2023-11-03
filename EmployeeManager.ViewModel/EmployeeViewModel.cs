@@ -1,5 +1,6 @@
 ﻿using EmployeeManager.Common.DataProvider;
 using EmployeeManager.Common.Model;
+using System;
 using System.ComponentModel;
 
 namespace EmployeeManager.ViewModel
