@@ -53,17 +53,14 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <DatePicker Grid.Row="1" Header="Entry Date" Margin="10"
+            <DatePicker Grid.Row="0" Header="Entry Date" Margin="10"
                      SelectedDate="{x:Bind ViewModel.SelectedReciept.EntryDate, 
                      Mode=TwoWay }" />
-            <TextBox Header="Supplier" Margin="10"
+            <TextBox Grid.Row="1" Header="Supplier" Margin="10"
                      Text="{x:Bind ViewModel.SelectedReciept.Supplier, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
-            <DatePicker Grid.Row="1" Header="Entry Date" Margin="10"
-                     SelectedDate="{x:Bind ViewModel.SelectedReciept.EntryDate, 
-                     Mode=TwoWay }" />
             <ComboBox Grid.Row="2" Header="Category" Margin="10" HorizontalAlignment="Stretch"
                       ItemsSource="{x:Bind ViewModel.Categories, Mode=OneWay}"
-                      DisplayMemberPath="Category"
+                      DisplayMemberPath="CategoryName"
                       SelectedValuePath="Id"
                       SelectedValue="{x:Bind ViewModel.SelectedReciept.Category,
                       Mode=TwoWay}"/>
