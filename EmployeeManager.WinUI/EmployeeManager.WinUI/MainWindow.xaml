@@ -14,7 +14,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width ="150"/>
+            <ColumnDefinition Width ="180"/>
             <ColumnDefinition Width ="350"/>
             <ColumnDefinition Width ="*"/>
         </Grid.ColumnDefinitions>
@@ -43,8 +43,10 @@
 
         <!--Main Area-->
         <Grid Grid.Row="1" Grid.Column="1"
-              Visibility="{x:Bind ViewModel.IsEmployeeSelected,Mode=OneWay}">
+              Visibility="{x:Bind ViewModel.IsRecieptSelected,Mode=OneWay}">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -59,17 +61,22 @@
             <DatePicker Grid.Row="1" Header="Entry Date" Margin="10"
                      SelectedDate="{x:Bind ViewModel.SelectedReciept.EntryDate, 
                      Mode=TwoWay }" />
-            <ComboBox Grid.Row="2" Header="Job Role" Margin="10" HorizontalAlignment="Stretch"
-                      ItemsSource="{x:Bind ViewModel.JobRoles, Mode=OneWay}"
+            <ComboBox Grid.Row="2" Header="Category" Margin="10" HorizontalAlignment="Stretch"
+                      ItemsSource="{x:Bind ViewModel.Categories, Mode=OneWay}"
                       DisplayMemberPath="Category"
                       SelectedValuePath="Id"
-                      SelectedValue="{x:Bind ViewModel.SelectedEmployee.JobRoleId,
+                      SelectedValue="{x:Bind ViewModel.SelectedReciept.Category,
                       Mode=TwoWay}"/>
             <CheckBox Grid.Row="3" Content="VAT" Margin="10"
-                      IsChecked="{x:Bind ViewModel.SelectedEmployee.IsCoffeeDrinker, Mode=TwoWay}"/>
-            <Button Grid.Row="4" Content="Save" Margin="10 10 10 30" 
-                    IsEnabled="{x:Bind ViewModel.SelectedEmployee.CanSave,Mode=OneWay}"
-                    Click="{x:Bind ViewModel.SelectedEmployee.Save}"
+                      IsChecked="{x:Bind ViewModel.SelectedReciept.VAT, Mode=TwoWay}"/>
+            <TextBox Grid.Row="4" Header="Vat Value" Margin="10"
+                     Text="{x:Bind ViewModel.SelectedReciept.VatValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
+            <TextBox Grid.Row="5" Header="Total" Margin="10"
+                     Text="{x:Bind ViewModel.SelectedReciept.Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
+
+            <Button Grid.Row="6" Content="Save" Margin="10 10 10 30" 
+                    IsEnabled="{x:Bind ViewModel.SelectedReciept.CanSave,Mode=OneWay}"
+                    Click="{x:Bind ViewModel.SelectedReciept.Save}"
                     VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
         </Grid>
         

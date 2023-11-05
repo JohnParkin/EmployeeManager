@@ -19,6 +19,8 @@ namespace EmployeeManager.Common.Model
         public double Total { get; set; }
 
         public bool VAT { get; set; }
-        
+
+        public double VatValue { get; set; }
+
     }
 }

@@ -37,10 +37,11 @@ namespace EmployeeManager.WinUI
 
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
-            if(ViewModel.Employees.Count == 0)
+            if(ViewModel.Reciepts.Count == 0)
             {
                 ViewModel.Load();
             }
+
         }
 
         public MainViewModel ViewModel { get; private set; }

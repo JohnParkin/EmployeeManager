@@ -47,6 +47,62 @@ namespace EmployeeManager.ViewModel
             }
         }
 
+        public int Category
+        {
+            get => _reciept.Catagory;
+            set
+            {
+                if (_reciept.Catagory != value)
+                {
+                    _reciept.Catagory = value;
+                    RaisePropertChanged();
+                }
+            }
+        }
+        public bool VAT
+        {
+            get => _reciept.VAT;
+            set
+            {
+                if (_reciept.VAT != value)
+                {
+                    _reciept.VAT = value;
+                    RaisePropertChanged();
+                }
+            }
+        }
+
+        public double Total
+        {
+            get => _reciept.Total;
+            set
+            {
+                if (_reciept.Total != value)
+                {
+                    _reciept.Total = value;
+                    RaisePropertChanged();
+                }
+            }
+        }
+        public double VatValue
+        {
+            get => _reciept.VatValue;
+            set
+            {
+                if (_reciept.VatValue != value)
+                {
+                    _reciept.VatValue = value;
+                    RaisePropertChanged();
+                }
+            }
+        }
+
         public bool CanSave => !string.IsNullOrEmpty(Supplier);
+
+        public void Save()
+        {
+            _recieptDataProvider.SaveReciept(_reciept);
+        }
+
     }
 }

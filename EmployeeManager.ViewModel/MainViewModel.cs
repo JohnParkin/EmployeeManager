@@ -85,6 +85,7 @@ namespace EmployeeManager.ViewModel
             {
                 Reciepts.Add(new RecieptViewModel(reciept, _recieptDataProvider));
             }
+
             Categories.Clear();
             foreach (var category in categories)
             {
