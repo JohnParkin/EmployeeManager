@@ -67,9 +67,9 @@
             <CheckBox Grid.Row="3" Content="VAT" Margin="10"
                       IsChecked="{x:Bind ViewModel.SelectedReciept.VAT, Mode=TwoWay}"/>
             <TextBox Grid.Row="4" Header="Vat Value" Margin="10"
-                     Text="{x:Bind ViewModel.SelectedReciept.VatValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
+                     Text= "{x:Bind ViewModel.SelectedReciept.VatValue, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
             <TextBox Grid.Row="5" Header="Total" Margin="10"
-                     Text="{x:Bind ViewModel.SelectedReciept.Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"/>
+                     Text="{x:Bind ViewModel.SelectedReciept.Total, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
             <Button Grid.Row="6" Content="Save" Margin="10 10 10 30" 
                     IsEnabled="{x:Bind ViewModel.SelectedReciept.CanSave,Mode=OneWay}"
@@ -79,7 +79,7 @@
         
         <!--Image View Area-->
         <Grid Grid.Row="1" Grid.Column="2">
-            <Image Source="/Images/Scan 0.jpg" />
+            <Image Source="{x:Bind ViewModel.SelectedReciept.ScannedImage, Mode=OneWay}" />
         </Grid>
         
     </Grid>

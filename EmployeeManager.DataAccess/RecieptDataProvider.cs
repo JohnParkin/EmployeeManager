@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace EmployeeManager.DataAccess
 {
@@ -12,24 +13,27 @@ namespace EmployeeManager.DataAccess
     public IEnumerable<Reciept> LoadReciepts()
     {
       return new List<Reciept>
+
       {
         new Reciept
         {
-          Id = 1,
-          Supplier = "National Trust",
-          Catagory = 4,
-          EntryDate = new DateTime(2023, 09, 25),
-          Total = 15.90,
-          VAT = true
+              Id = 1,
+              Supplier = "National Trust",
+              Catagory = 4,
+              EntryDate = new DateTime(2023, 09, 25),
+              Total = 15.90,
+              VAT = true,
+              VatValue = 2.65,
+              ScannedImage = "/Images/Scan 6.jpg"
         },
         new Reciept
         {
-          Id = 2,
-          Supplier = "One Stop",
-          Catagory = 1,
-          EntryDate = new DateTime(2019, 10, 1),
-          Total = 10,
-          VAT = true
+                Id = 2,
+                Supplier = "One Stop",
+                Catagory = 1,
+                EntryDate = new DateTime(2019, 10, 1),
+                Total = 10,
+                VAT = true
         },
         new Reciept
         {
@@ -44,16 +48,20 @@ namespace EmployeeManager.DataAccess
           Id = 4,
           Supplier = "One Stop",
           Catagory = 1,
-          EntryDate = new DateTime(2019, 10, 1),
+          EntryDate = new DateTime(2023, 10, 16),
           Total = 10,
+          VAT = true,
+          VatValue = 0.54,
+          ScannedImage = "/Images/Scan 0.jpg"
         },
         new Reciept
         {
           Id = 5,
-          Supplier = "One Stop",
-          Catagory = 1,
-          EntryDate = new DateTime(2019, 10, 1),
-          Total = 10,
+          Supplier = "Superdrug",
+          Catagory = 16,
+          EntryDate = new DateTime(2023, 10, 17),
+          Total = 16.71,
+          ScannedImage = "/Images/Scan 1.jpg"
         }
       };
     }

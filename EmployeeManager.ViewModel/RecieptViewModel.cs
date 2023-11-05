@@ -96,6 +96,18 @@ namespace EmployeeManager.ViewModel
                 }
             }
         }
+        public string ScannedImage
+        {
+            get => _reciept.ScannedImage;
+            set
+            {
+                if (_reciept.ScannedImage != value)
+                {
+                    _reciept.ScannedImage = value;
+                    RaisePropertChanged();
+                }
+            }
+        }
 
         public bool CanSave => !string.IsNullOrEmpty(Supplier);
 
