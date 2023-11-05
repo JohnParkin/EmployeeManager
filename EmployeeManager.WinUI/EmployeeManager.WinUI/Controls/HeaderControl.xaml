@@ -10,8 +10,8 @@
     <Border Background="#F05A28">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <Image Source ="/Images/30a Thunder Icon.png" Height="90" Margin="5"/>
-            <TextBlock Text="Recipt Man" FontSize="40"
+            <Image Source ="/Images/30a Thunder Icon.png" Height="40" Margin="5"/>
+            <TextBlock Text="Recipt Man" FontSize="20"
                            VerticalAlignment="Center"/>
         </StackPanel>
     </Border>
