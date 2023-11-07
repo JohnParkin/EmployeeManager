@@ -78,7 +78,8 @@
         </Grid>
         
         <!--Image View Area-->
-        <Grid Grid.Row="1" Grid.Column="2">
+        <Grid Grid.Row="1" Grid.Column="2"
+              Visibility="{x:Bind ViewModel.IsRecieptSelected,Mode=OneWay}">
             <Image Source="{x:Bind ViewModel.SelectedReciept.ScannedImage, Mode=OneWay}" />
         </Grid>
         

@@ -7,12 +7,12 @@ namespace EmployeeManager.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private EmployeeViewModel _selectedEmployee;
-        private RecieptViewModel _selectedReciept;
+        private RecieptViewModel  _selectedReciept;
         private readonly IEmployeeDataProvider _employeeDataProvider;
-        private readonly IRecieptDataProvider _recieptDataProvider;
+        private readonly IRecieptDataProvider  _recieptDataProvider;
 
-        public MainViewModel(IEmployeeDataProvider employeeDataProvider
-                            ,IRecieptDataProvider recieptDataProvider)
+        public MainViewModel(IEmployeeDataProvider employeeDataProvider,
+                             IRecieptDataProvider recieptDataProvider)
         {
             _employeeDataProvider = employeeDataProvider;
             _recieptDataProvider = recieptDataProvider;
