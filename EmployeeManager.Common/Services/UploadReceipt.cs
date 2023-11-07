@@ -14,7 +14,7 @@ namespace EmployeeManager.Common.Services
     {
         private string _filepath = "";
 
-        string connection_string = "DefaultEndpointsProtocol=https;AccountName=azurestoragepot;AccountKey=7wfdwJHLfDUP+gpTzOta+bYkDRal3mLW7ELHQcrf86RaTmlwITTPX3U/fUOohjXmU4padfjJmGFZ+ASteqI2dg==;EndpointSuffix=core.windows.net";
+        string connection_string = "";
 
         string blobContainerName = "receipts-test1";
 
