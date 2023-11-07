@@ -15,6 +15,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using EmployeeManager.Common.Services;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -23,6 +24,8 @@ namespace EmployeeManager.WinUI.Controls
 {
     public sealed partial class HeaderControl : UserControl
     {
+        BlobUpload blobUpload = new BlobUpload();
+
         public HeaderControl()
         {
             this.InitializeComponent();
@@ -30,7 +33,7 @@ namespace EmployeeManager.WinUI.Controls
 
         public void UpLoad()
         {
-            Debug.WriteLine("Uploading New receipt");
+            blobUpload.UploadFileToBlobStorage();
         }
     }
 }
