@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using EmployeeManager.Common.Model;
 using EmployeeManager.Common.DataProvider;
+using static System.Net.Mime.MediaTypeNames;
+using Windows.System;
 
 namespace EmployeeManager.ViewModel
 {
@@ -98,7 +100,15 @@ namespace EmployeeManager.ViewModel
         }
         public string ScannedImage
         {
-            get => _reciept.ScannedImage;
+            get
+            {
+                if (_reciept.ScannedImage == null)
+                {
+                    _reciept.ScannedImage = "/Images/No_image_available.svg.png";
+                }
+                return _reciept.ScannedImage;
+            }
+            //get => _reciept.ScannedImage;
             set
             {
                 if (_reciept.ScannedImage != value)
