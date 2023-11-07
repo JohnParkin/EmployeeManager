@@ -6,7 +6,6 @@ namespace EmployeeManager.Common.DataProvider
     public interface IRecieptDataProvider
     {
         IEnumerable<Reciept> LoadReciepts();
-
         IEnumerable<Category> LoadCategories();
         void SaveReciept(Reciept reciept);
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +20,10 @@ namespace EmployeeManager.Common.Model
         public double Total { get; set; }
 
         public bool VAT { get; set; }
-        
+
+        public double VatValue { get; set; }
+
+        public string ScannedImage { get; set; }   
+
     }
 }
