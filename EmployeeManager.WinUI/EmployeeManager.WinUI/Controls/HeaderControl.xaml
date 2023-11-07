@@ -15,7 +15,7 @@
                 <ColumnDefinition Width ="180"/>
             </Grid.ColumnDefinitions>
                 <Grid Grid.Row="0" Grid.Column="0">
-                <Button Content="Add New Receipt" Margin="10"/>
+                <Button Content="Add New Receipt" Click="{x:Bind UpLoad}" Margin="10"/>
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
                 <StackPanel Orientation="Horizontal">

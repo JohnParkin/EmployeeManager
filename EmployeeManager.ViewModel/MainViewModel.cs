@@ -1,6 +1,7 @@
 ﻿using EmployeeManager.Common.DataProvider;
 using EmployeeManager.Common.Model;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace EmployeeManager.ViewModel
 {
@@ -92,5 +93,6 @@ namespace EmployeeManager.ViewModel
                 Categories.Add(category);
             }
         }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.UI.Xaml;
+﻿using EmployeeManager.Common.Model;
+using EmployeeManager.ViewModel;
+using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
@@ -26,9 +28,9 @@ namespace EmployeeManager.WinUI.Controls
             this.InitializeComponent();
         }
 
-        public void updload()
+        public void UpLoad()
         {
-            Debug.WriteLine($"Reciept Upload");
+            Debug.WriteLine("Uploading New receipt");
         }
     }
 }
