@@ -24,7 +24,9 @@ namespace EmployeeManager.WinUI.Controls
 {
     public sealed partial class HeaderControl : UserControl
     {
-        BlobUpload blobUpload = new BlobUpload();
+        public static string connectionString = App.ConnectionString;
+        
+        BlobUpload blobUpload = new BlobUpload(connectionString);
 
         public HeaderControl()
         {

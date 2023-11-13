@@ -32,6 +32,8 @@ namespace EmployeeManager.WinUI
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
+        /// 
+
         public App()
         {
             this.InitializeComponent();
@@ -41,7 +43,8 @@ namespace EmployeeManager.WinUI
                 .AddUserSecrets<App>().Build();
 
             var secretProvider = builder.Providers.First();
-            secretProvider.TryGet("ConnectionString", out var secretPass);
+            secretProvider.TryGet("ConnectionString", out var secretCS);
+            ConnectionString = secretCS;
         }
 
         /// <summary>
@@ -56,5 +59,7 @@ namespace EmployeeManager.WinUI
         }
 
         private Window m_window;
+
+        public static string ConnectionString = "";
     }
 }

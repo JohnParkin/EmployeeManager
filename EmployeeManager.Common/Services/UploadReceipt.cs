@@ -16,16 +16,17 @@ namespace EmployeeManager.Common.Services
     {
         private string _filepath = "";
 
-        string connection_string = "DefaultEndpointsProtocol=https;AccountName=azurestoragepot;AccountKey=E2ZogKGSztwlPpYOTH6gyZUW6y04XMtCXky/3W8p/dESc0h3Z6pOhuACmg8voBmWKja2rbjN5ijq+AStDRe3/A==;EndpointSuffix=core.windows.net";
+        private string _connectionString = "";
 
         string blobContainerName = "receipts-test1";
 
         private BlobContainerClient _blobContainerClient;
 
-        public BlobUpload() 
+        public BlobUpload(string connectionString) 
         { 
-            _blobContainerClient = new BlobContainerClient(connection_string, blobContainerName);
-            _filepath = "C:/Users/johnp/source/repos/Building Desktop Applications/EmployeeManager.WinUI/EmployeeManager.WinUI/Images/Scan 6.jpg";
+            _connectionString = connectionString;
+            _blobContainerClient = new BlobContainerClient(_connectionString, blobContainerName);
+            _filepath = "C:/Users/johnp/source/repos/Building Desktop Applications/EmployeeManager.WinUI/EmployeeManager.WinUI/Images/Scan 0.jpg";
         }
 
         public async void UploadFileToBlobStorage()

@@ -27,6 +27,8 @@ namespace EmployeeManager.WinUI
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        private string _connectionString;
+
         public MainWindow()
         {
             this.InitializeComponent();
@@ -41,7 +43,6 @@ namespace EmployeeManager.WinUI
             {
                 ViewModel.Load();
             }
-
         }
 
         public MainViewModel ViewModel { get; private set; }
